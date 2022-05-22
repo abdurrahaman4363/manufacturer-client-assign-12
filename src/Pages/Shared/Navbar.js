@@ -10,7 +10,7 @@ const Navbar = () => {
         <li><Link to="/login">Login</Link></li>
     </>
     return (
-        <div class="navbar bg-base-100 bg-accent text-white">
+        <div class="navbar bg-base-100 bg-[#3A4256] text-white">
             <div class="navbar-start ">
                 <div class="dropdown">
                     <label tabindex="0" class="btn btn-ghost lg:hidden">
