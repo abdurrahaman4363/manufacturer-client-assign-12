@@ -8,6 +8,7 @@ import NotFound from './Pages/NotFound/NotFound';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import SignUp from './Pages/Login/SignUp';
 import RequiredAuth from './Pages/Login/RequiredAuth';
+import PurchasePage from './Pages/Home/PurchasePage';
 
 function App() {
   return (
@@ -15,12 +16,14 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="home" element={<Home />} />
         <Route path="blogs" element={<Blogs />} />
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
-        <Route path="myPortfolio" element={
+        <Route path="myPortfolio" element={<MyPortfolio/>} />
+        <Route path="purchasePage" element={
           <RequiredAuth>
-            <MyPortfolio></MyPortfolio>
+            <PurchasePage></PurchasePage>
           </RequiredAuth>
         } />
         <Route path="*" element={<NotFound />} />

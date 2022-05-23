@@ -63,7 +63,7 @@ const Login = () => {
                                         message: 'Email is Required'
                                     },
                                     pattern: {
-                                        value: /[a-z0-0]+@[a-z]+\.[a-z]{2,3}/,
+                                        value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
                                         message: 'Provide a valid Email'
                                     }
                                 }
