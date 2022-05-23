@@ -9,6 +9,10 @@ import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import SignUp from './Pages/Login/SignUp';
 import RequiredAuth from './Pages/Login/RequiredAuth';
 import PurchasePage from './Pages/Home/PurchasePage';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import MyProfile from './Pages/Dashboard/MyProfile';
+import AddReview from './Pages/Dashboard/AddReview';
+import MyOrders from './Pages/Dashboard/MyOrders';
 
 function App() {
   return (
@@ -26,6 +30,15 @@ function App() {
             <PurchasePage></PurchasePage>
           </RequiredAuth>
         } />
+        <Route path="dashboard" element={
+          <RequiredAuth>
+            <Dashboard></Dashboard>
+          </RequiredAuth>
+        } >
+          <Route index element={<MyProfile></MyProfile>}></Route>
+          <Route path='myOrders' element={<MyOrders></MyOrders>}></Route>
+          <Route path='addReview' element={<AddReview></AddReview>}></Route>
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
