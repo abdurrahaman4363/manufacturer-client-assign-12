@@ -29,6 +29,7 @@ const PurchasePage = () => {
             Address: event.target.Address.value,
             order: event.target.order.value,
             phone: event.target.phone.value,
+            price: event.target.price.value,
         }
         if(order >= minimumQuantity && order <= availableQuantity ){
         fetch('http://localhost:5000/order',{
@@ -40,6 +41,7 @@ const PurchasePage = () => {
         .then(data => {
             console.log(data);
             toast('Order is successful')
+            event.target.reset();
         })
     }
     else{
@@ -73,7 +75,7 @@ const PurchasePage = () => {
                             <input type="email" value={user?.email} name="email" placeholder="Type here" class="input input-bordered w-full max-w-xs mb-1" />
                             <textarea class="textarea textarea-bordered w-full max-w-xs mb-1" name="Address" placeholder="Address"></textarea>
 
-                            <input type="text" name="price" value= {`price for one ${purchase.price}`} placeholder="Type here" class="input input-bordered w-full max-w-xs mb-1" />
+                            <input type="text" name="price" value= {`per price ${purchase.price}`} placeholder="Type here" class="input input-bordered w-full max-w-xs mb-1" />
 
                             <input className='input input-bordered w-full max-w-xs mb-1' type="number" name="order" placeholder={`Minimum Order ${purchase.minimumQuantity} and Maximum Order ${purchase.availableQuantity}`} id="" /><br />                            
                             <input className='input input-bordered w-full max-w-xs mb-1' type="number" name="phone" placeholder='phone' id="" /><br />                            
