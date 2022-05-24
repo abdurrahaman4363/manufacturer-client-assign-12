@@ -3,11 +3,12 @@ import { useParams } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { toast } from 'react-toastify'
+import MyProfileDetail from './MyProfileDetail';
 
 const MyProfile = () => {
     const [user] = useAuthState(auth);
     // console.log(user.email)
-
+//////////////// data send
     const handleAddItem = event => {
         event.preventDefault();
         const orders = {
@@ -34,9 +35,25 @@ const MyProfile = () => {
             event.target.reset();
         })
     }
+
+    ///////////////////data get
+
+    const [profile, setProfile] = useState([]);
+    // console.log(profile)
+    
+
+    useEffect(() => {
+        
+            fetch(`http://localhost:5000/profile?email=${user.email}`)
+                .then(res => res.json())
+                .then(data => {
+                    setProfile(data);
+                })
+        
+    }, [user])
     return (
         <div>
-            <h1 className='text-center text-xl'>This is my Profile</h1>
+            <h1 className='text-center text-xl'>This is my Profile : {profile.length}</h1>
             <div class="hero bg-base-200">
                 
                 <div class="hero-content text-center">
@@ -57,6 +74,16 @@ const MyProfile = () => {
                 </div>
                 
             </div>
+
+           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+           {
+               profile.map(p => <MyProfileDetail 
+                key={p._id}
+               p={p}
+               ></MyProfileDetail>)
+           }
+           </div>
+          
         </div>
     );
 };
