@@ -75,7 +75,7 @@ const PurchasePage = () => {
                             <input type="email" value={user?.email} name="email" placeholder="Type here" class="input input-bordered w-full max-w-xs mb-1" />
                             <textarea class="textarea textarea-bordered w-full max-w-xs mb-1" name="Address" placeholder="Address"></textarea>
 
-                            <input type="text" name="price" value= {`per price ${purchase.price}`} placeholder="Type here" class="input input-bordered w-full max-w-xs mb-1" />
+                            <input type="text" name="price" value= {`${purchase.price}`} placeholder="Type here" class="input input-bordered w-full max-w-xs mb-1" />
 
                             <input className='input input-bordered w-full max-w-xs mb-1' type="number" name="order" placeholder={`Minimum Order ${purchase.minimumQuantity} and Maximum Order ${purchase.availableQuantity}`} id="" /><br />                            
                             <input className='input input-bordered w-full max-w-xs mb-1' type="number" name="phone" placeholder='phone' id="" /><br />                            
