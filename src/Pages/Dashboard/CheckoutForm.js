@@ -13,9 +13,9 @@ const CheckoutForm = ({orders}) => {
 
     const {price, email, name,_id } = orders;
     console.log(price)
-
-  /*    useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+//////////// when this code will uncomment this is crate a stripe secret problem
+     /* useEffect(() => {
+        fetch('https://protected-journey-65851.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -29,7 +29,7 @@ const CheckoutForm = ({orders}) => {
                     setClientSecret(data.clientSecret);
                 }
             })
-    }, [price])  */
+    }, [price])    */
 
 
     const  handleSubmit = async (event) =>{
@@ -86,7 +86,7 @@ const CheckoutForm = ({orders}) => {
                     },
                 }}
             />
-            <button className='btn btn-success btn-sm mt-4' type="submit" disabled={!stripe}>
+            <button className='btn btn-success btn-sm mt-4' type="submit" disabled={!stripe || !clientSecret}>
                 Pay
             </button>
         </form>

@@ -23,7 +23,7 @@ const MyProfile = () => {
         }
 
         console.log(orders.name, orders.email, orders.education, orders.location, orders.phone)
-        fetch(`http://localhost:5000/profile/${user.email}`,{
+        fetch(`https://protected-journey-65851.herokuapp.com/profile/${user.email}`,{
             method:'PUT',
             headers:{'content-type':'application/json'},
             body:JSON.stringify(orders)
@@ -44,7 +44,7 @@ const MyProfile = () => {
 
     useEffect(() => {
         
-            fetch(`http://localhost:5000/profile?email=${user.email}`)
+            fetch(`https://protected-journey-65851.herokuapp.com/profile?email=${user.email}`)
                 .then(res => res.json())
                 .then(data => {
                     setProfile(data);

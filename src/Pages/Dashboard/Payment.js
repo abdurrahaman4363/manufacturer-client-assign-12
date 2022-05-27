@@ -9,13 +9,13 @@ const stripePromise = loadStripe('pk_test_51L0jK3EnHvMGsEJY1kMPeKl83ramGhBH57Xkm
 const Payment = () => {
     const { id } = useParams();
 
-    const url = `http://localhost:5000/order/${id}`
+    const url = `https://protected-journey-65851.herokuapp.com/order/${id}`
 
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/order/${id}`)
+        fetch(`https://protected-journey-65851.herokuapp.com/order/${id}`)
             .then(res => res.json())
             .then(data => {
                 setOrders(data);

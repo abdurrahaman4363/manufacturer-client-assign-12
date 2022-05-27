@@ -4,6 +4,7 @@
 ### Admin: abdurjrahaman4363@gmail.com pass: 123456
 ### Admin: mizan@mizan.com pass: 123456
 
+Live site link: https://agriculture-manufact-assign-12.web.app/
 
 Client Side code link: https://github.com/programming-hero-web-course1/manufacturer-website-client-side-abdurrahaman4363
 

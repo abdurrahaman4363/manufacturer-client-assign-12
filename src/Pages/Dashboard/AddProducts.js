@@ -22,7 +22,7 @@ const AddProducts = () => {
         }
 
 
-        axios.post('http://localhost:5000/tool', addItem)
+        axios.post('https://protected-journey-65851.herokuapp.com/tool', addItem)
 
             .then(Response => {
                 const { data } = Response;

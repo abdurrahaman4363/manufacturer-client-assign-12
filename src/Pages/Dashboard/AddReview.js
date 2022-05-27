@@ -22,7 +22,7 @@ const AddReview = (event) => {
         }
         
         if(ratings > -1 && ratings <6 ){
-            axios.post('http://localhost:5000/review', addItem)
+            axios.post('https://protected-journey-65851.herokuapp.com/review', addItem)
 
             .then(Response => {
                 const { data } = Response;
