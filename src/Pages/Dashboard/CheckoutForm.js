@@ -8,13 +8,13 @@ const CheckoutForm = ({orders}) => {
     const [cardError, setCardError] = useState('')
     const [clientSecret, setClientSecret] = useState('');
     const [success, setSuccess] = useState('');
-    const [processing, setProcessing] = useState(false);
-    const [transactionId, setTransactionId] = useState('');
-
-    const {price, email, name,_id } = orders;
+    
     
 
-   /*  useEffect(() => {
+    const {price, email, name,_id } = orders;
+    console.log(price)
+
+  /*    useEffect(() => {
         fetch('http://localhost:5000/create-payment-intent', {
             method: 'POST',
             headers: {
@@ -29,7 +29,7 @@ const CheckoutForm = ({orders}) => {
                     setClientSecret(data.clientSecret);
                 }
             })
-    }, [price]) */
+    }, [price])  */
 
 
     const  handleSubmit = async (event) =>{
@@ -50,7 +50,7 @@ const CheckoutForm = ({orders}) => {
          
              setCardError(error?.message || '')
 
-             // confirmcardpayment
+             
 
         const { paymentIntent, error: intentError } = await stripe.confirmCardPayment(
             clientSecret,
