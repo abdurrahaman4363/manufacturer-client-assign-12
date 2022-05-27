@@ -1,6 +1,9 @@
 # Getting Started with Create React App
 
-### Agriculture Manufacturer
+## Agriculture Manufacturer
+### Admin: abdurjrahaman4363@gmail.com pass: 123456
+### Admin: mizan@mizan.com pass: 123456
+
 
 Client Side code link: https://github.com/programming-hero-web-course1/manufacturer-website-client-side-abdurrahaman4363
 
@@ -16,8 +19,13 @@ Server Side Code link: https://github.com/programming-hero-web-course1/manufactu
 * make some button to go different page
 * add two section and there has three item
 * create a blogs route and there has answer question
-* emaim verified system implement
-* there has password reset system
+* crate dashboard
+* crate admin route
+* user only see two component 
+* a min see four component
+* which component wil see user this is not see admin
+* my profile will see both user and admin
+
 
 ### Use features
 - use nodejs
@@ -27,7 +35,12 @@ Server Side Code link: https://github.com/programming-hero-web-course1/manufactu
 - use react firebase 
 - use react bootstrap
 - use react fireabase hooks
-- react toast and react hook form etc.
+- react toast and react hook form 
+- react query use
+- axios use
+- react hook form
+- tailwind css use
+- daisy ui uses etc.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
