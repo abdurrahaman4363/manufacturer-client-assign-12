@@ -10,7 +10,7 @@ const PurchasePage = () => {
 
     const [purchase, setPurchase] = useState({});
     useEffect(() => {
-        const url = `https://protected-journey-65851.herokuapp.com/tool/${purchasePageId}`
+        const url = `http://localhost:5000/tool/${purchasePageId}`
         fetch(url)
             .then(res => res.json())
             .then(data => setPurchase(data));
@@ -32,7 +32,7 @@ const PurchasePage = () => {
             price: event.target.price.value,
         }
         if(order >= minimumQuantity && order <= availableQuantity ){
-        fetch('https://protected-journey-65851.herokuapp.com/order',{
+        fetch('http://localhost:5000/order',{
             method:'POST',
             headers:{'content-type':'application/json'},
             body:JSON.stringify(orders)

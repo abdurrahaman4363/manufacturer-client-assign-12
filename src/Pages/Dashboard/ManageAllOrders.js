@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 
 const ManageAllOrders = () => {
     const [orders, setOrders] = useState([]);
+    // console.log(orders,'manageallorders');
 
     useEffect(()=>{
-         fetch('https://protected-journey-65851.herokuapp.com/order',{
+         fetch('http://localhost:5000/order',{
             method:'GET',
               headers:{
                   authorization:`Bearer ${localStorage.getItem('accessToken')}`

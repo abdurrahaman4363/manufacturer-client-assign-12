@@ -10,9 +10,10 @@ const Tool = ({ tool }) => {
         navigate(`/purchasePage/${id}`)
     }
     return (
-        <div class="card lg:max-w-lg bg-base-100 shadow-xl">
+        <div class="card lg:max-w-lg bg-base-100 shadow-xl mx-6">
+        <img style={{height:'300px'}} className='rounded' src={img} alt="" />
             <div class="card-body">
-                <img src={img} alt="" />
+                {/*<img style={{height:'100%'}} className='rounded' src={img} alt="" />*/}
                 <h2 class="card-title">{name}</h2>
                 <p>{description}</p>
                 <p>Price: {price}</p>

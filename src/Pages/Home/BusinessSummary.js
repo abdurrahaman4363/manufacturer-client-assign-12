@@ -4,7 +4,7 @@ import review from '../../assets/icons/review.png'
 
 const BusinessSummary = () => {
     return (
-        <div>
+        <div className='mx-6'>
             <h1 className='text-xl text-center my-10 font-bold text-purple-500'>Business Summary</h1>
             <div className='grid sm:grid-cols-1 lg:grid-cols-3 gap-3'>
                 {/* one */}

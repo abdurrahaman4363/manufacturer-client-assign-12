@@ -7,6 +7,7 @@ import MyProfileDetail from './MyProfileDetail';
 
 const MyProfile = () => {
     const [user] = useAuthState(auth);
+    const [profile, setProfile] = useState([]);
     // console.log(user.email)
 //////////////// data send
     const handleAddItem = event => {
@@ -23,7 +24,7 @@ const MyProfile = () => {
         }
 
         console.log(orders.name, orders.email, orders.education, orders.location, orders.phone)
-        fetch(`https://protected-journey-65851.herokuapp.com/profile/${user.email}`,{
+        fetch(`http://localhost:5000/profile/${user.email}`,{
             method:'PUT',
             headers:{'content-type':'application/json'},
             body:JSON.stringify(orders)
@@ -38,22 +39,22 @@ const MyProfile = () => {
 
     ///////////////////data get
 
-    const [profile, setProfile] = useState([]);
+    // const [profile, setProfile] = useState([]);
     // console.log(profile)
     
 
     useEffect(() => {
         
-            fetch(`https://protected-journey-65851.herokuapp.com/profile?email=${user.email}`)
+            fetch(`http://localhost:5000/profile?email=${user.email}`)
                 .then(res => res.json())
                 .then(data => {
                     setProfile(data);
                 })
         
-    }, [user])
+    }, [profile])
     return (
         <div>
-            <h1 className='text-center text-xl'>This is my Profile : {profile.length}</h1>
+            {/*<h1 className='text-center text-xl'>This is my Profile : {profile.length}</h1>*/}
             <div class="hero bg-base-200">
                 
                 <div class="hero-content text-center">

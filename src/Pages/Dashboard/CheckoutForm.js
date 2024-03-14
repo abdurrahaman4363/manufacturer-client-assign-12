@@ -15,7 +15,7 @@ const CheckoutForm = ({orders}) => {
     console.log(price)
 //////////// when this code will uncomment this is crate a stripe secret problem
      /* useEffect(() => {
-        fetch('https://protected-journey-65851.herokuapp.com/create-payment-intent', {
+        fetch('http://localhost:5000/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

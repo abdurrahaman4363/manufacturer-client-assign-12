@@ -5,7 +5,7 @@ const ManageProducts = () => {
     const [tools, setTools] = useState([]);
 
     useEffect(()=>{
-         fetch('https://protected-journey-65851.herokuapp.com/tool')
+         fetch('http://localhost:5000/tool')
          .then(res => res.json())
          .then(data =>{
             //   console.log(data);
@@ -17,7 +17,7 @@ const ManageProducts = () => {
      const handleAddDelete = id => {
         const proced = window.confirm('Are you sure???');
         if (proced) {
-            const url = `https://protected-journey-65851.herokuapp.com/tool/${id}`;
+            const url = `http://localhost:5000/tool/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

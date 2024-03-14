@@ -5,7 +5,7 @@ const Tools = () => {
     const [tools, setTools] = useState([]);
 
     useEffect(()=>{
-         fetch('https://protected-journey-65851.herokuapp.com/tool')
+         fetch('http://localhost:5000/tool')
          .then(res => res.json())
          .then(data =>{
             //   console.log(data);
