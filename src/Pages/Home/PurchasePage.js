@@ -51,11 +51,11 @@ const PurchasePage = () => {
 
     }
     return (
-        <div>
+        <div className='mt-24 mb-20'>
             
             <div class="  bg-base-100 shadow-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 ">
             <div class="card-body">
-                <img src={purchase.img} alt="" />
+                <img style={{height:'300px'}} src={purchase.img} alt="" />
                 <h2 class="card-title">{purchase.name}</h2>
                 <p>{purchase.description}</p>
                 <p>Price: {purchase.price}</p>
@@ -79,7 +79,7 @@ const PurchasePage = () => {
 
                             <input className='input input-bordered w-full max-w-xs mb-1' type="number" name="order" placeholder={`Minimum Order ${purchase.minimumQuantity} and Maximum Order ${purchase.availableQuantity}`} id="" /><br />                            
                             <input className='input input-bordered w-full max-w-xs mb-1' type="number" name="phone" placeholder='phone' id="" /><br />                            
-                            <input className='w-full max-w-xs text-primary uppercase font-bold mb-1' type="submit" value="Click Here To Order" />
+                            <input className='btn btn-outline w-full max-w-xs text-primary uppercase font-bold mb-1' type="submit" value="Click Here To Order" />
                              
                         </form>
                         

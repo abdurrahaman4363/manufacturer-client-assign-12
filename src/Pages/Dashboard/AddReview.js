@@ -52,7 +52,7 @@ const AddReview = (event) => {
                             <input type="email" value={user?.email} name="email" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
                             <textarea class="textarea textarea-bordered w-full max-w-xs my-2" name="description" placeholder="Write Description"></textarea>
                             <input className='input input-bordered w-full max-w-xs mb-3' type="number" name="ratings" placeholder='Ratings' id="" /><br />                            
-                            <input className='w-full max-w-xs text-primary uppercase font-bold' type="submit" value="Add item" />
+                            <input className='btn btn-outline w-full max-w-xs text-primary uppercase font-bold' type="submit" value="Add item" />
                              
                         </form>
                         

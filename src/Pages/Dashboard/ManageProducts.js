@@ -38,7 +38,7 @@ const ManageProducts = () => {
                 {
                     tools.map( tool => <div class="card lg:max-w-lg bg-base-100 shadow-xl">
                     <div class="card-body">
-                        <img src={tool.img} alt="" />
+                        <img style={{height:'250px'}} className='rounded' src={tool.img} alt="" />
                         <h2 class="card-title">{tool.name}</h2>
                         <p>{tool.description}</p>
                         <p>Price: {tool.price}</p>

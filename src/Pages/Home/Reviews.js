@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
-import Loading from '../Shared/Loading';
 import Review from './Review';
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
+
 
     useEffect(()=>{
          fetch('http://localhost:5000/review')
@@ -14,6 +14,7 @@ const Reviews = () => {
               setReviews(data.reverse());
             })
     },[])
+
     return (
         <div className=''>
             <h1 className='text-xl text-center my-10 font-bold text-purple-500'>Reviews : {reviews.length}</h1>

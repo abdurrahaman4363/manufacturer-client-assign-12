@@ -67,7 +67,7 @@ const MyProfile = () => {
                             <textarea class="textarea textarea-bordered w-full max-w-xs mb-1" name="education" placeholder="education"></textarea>
                             <textarea class="textarea textarea-bordered w-full max-w-xs mb-1" name="location" placeholder="location"></textarea>
                             <input className='input input-bordered w-full max-w-xs mb-1' type="number" name="phone" placeholder='phone' id="" /><br />                            
-                            <input className='w-full max-w-xs text-primary uppercase font-bold mb-1' type="submit" value="Click Here To Update" />
+                            <input className='btn btn-outline w-full max-w-xs text-primary uppercase font-bold mb-1' type="submit" value="Click Here To Update" />
                              
                         </form>
                         

@@ -51,7 +51,7 @@ const AddProducts = () => {
                             <input className='input input-bordered w-full max-w-xs mb-3' type="number" name="price" placeholder='price' id="" /><br />
                             <input name="img" placeholder="Photo URL" class="input input-bordered w-full max-w-xs" />
 
-                            <input className='w-full max-w-xs text-primary uppercase font-bold' type="submit" value="Add item" />
+                            <input className='btn btn-outline w-full max-w-xs text-primary uppercase font-bold' type="submit" value="Add item" />
 
                         </form>
 
